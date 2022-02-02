@@ -1,0 +1,4 @@
+O ciclo do TDD envolvendo testes funcionais e testes de unidade é um pouco mais complexo do que o básico do TDD
+de escrever um teste que não passa, escrever o código até o teste passar, e por fim refatorar. Com os testes mais
+complexos, após a escrita de um teste funcional que não passa, se entra num ciclo do TDD "convencional", descrito
+a pouco. De forma simplificada, ela vira a etapa de escrever o código mínimo até passar do teste funcional.
