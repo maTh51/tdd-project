@@ -50,6 +50,11 @@ class NewListTest(TestCase):
         response = self.client.post('/lists/new', data={'item_text': 'A new list item'})
         new_list = List.objects.first()
         self.assertRedirects(response, f'/lists/{new_list.id}/')
+    
+    def test_invalid_list_items_arent_saved(self):
+        self.client.post('/lists/new', data={'item_text': ''})
+        self.assertEqual(List.objects.count(), 0)
+        self.assertEqual(Item.objects.count(), 0)
 
 
 class NewItemTest(TestCase):
